@@ -33,6 +33,6 @@ pip install qrcode
 
 
   
-![Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png)
+![Logo](https://cdn.discordapp.com/attachments/1052904468649357364/1155858686724546670/8300924.png)
 
     
