@@ -2,7 +2,7 @@ import qrcode
 import random
 import urllib.parse
 import os
-import base64
+import time
 
 number = random.randint(100000, 9000000)
 
@@ -25,10 +25,9 @@ else:
         img.save(img_file)
     else:
         print("Geçersiz dosya türü seçtiniz. Sadece 'png' veya 'jpeg' kabul edilir.")
+    
+    print(f"{img_file} dosyası oluşturuldu ve 10 saniye sonra silinecek.")
     os.system(f'start {img_file}')
-
-    with open(img_file, "rb") as img_file:
-        my_string = base64.b64encode(img_file.read())
-    print(my_string)
-    
-    
+    time.sleep(10)
+    os.system('taskkill /F /FI "IMAGENAME eq Microsoft.Photos.exe"')
+    os.remove(img_file)  
